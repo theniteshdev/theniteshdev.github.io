@@ -5,57 +5,31 @@
     <meta charset="UTF-8">
     <title>Nitesh | Backend Dev</title>
     <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
-    <script src="./script.js"></script>
-    <style>
-        body {
-            font-family: monospace;
-            max-width: 600px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #121212;
-                color: #ffffff;
-            }
-
-            a {
-                color: orange;
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            body {
-                background-color: #ffffff;
-                color: #121212;
-            }
-
-            a {
-                color: green;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./script.js"></script>
 </head>
 
 <body>
 
+    <header>
+        <h1>
+            <img src="./favicon.png" alt="logo">
+            Hi, I'm Nitesh
+        </h1>
+        <p class="tagline">
+            Backend-focused developer who cares about performance, systems, and clean architecture.
+        </p>
 
-    <h1><img src="./favicon.png" height="100px" style="vertical-align: middle;" alt=""> Hi, I'm Nitesh </h1>
-    <p>I build backend systems, APIs, and understand how things work under the hood.</p>
+        <div class="links">
+            <a target="_blank" href="https://x.com/theniteshdev">Twitter</a>
+            <a target="_blank" href="https://github.com/theniteshdev">GitHub</a>
+        </div>
+    </header>
 
-    <div>
-        <a target="_blank" href="https://x.com/theniteshdev">twitter: @theniteshdev</a>
-        <br>
-        <a target="_blank" href="https://github.com/theniteshdev">github: @theniteshdev</a>
-    </div>
-
-    <h2>Live Projects</h2>
-    <div id="projects">Loading...</div>
+    <main>
+        <h2>Live Projects</h2>
+        <div id="projects">Loading...</div>
+    </main>
 
 </body>
 
