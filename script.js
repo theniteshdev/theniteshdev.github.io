@@ -1,5 +1,6 @@
 const username = "theniteshdev";
 
+
 async function getProjects() {
     const res = await fetch(`https://api.github.com/users/${username}/repos`);
     const repos = await res.json();
@@ -16,7 +17,7 @@ async function getProjects() {
 
     pagesProjects.forEach(repo => {
         const div = document.createElement("div");
-
+        div.className = "project";
         const url = repo.name === `${username}.github.io`
             ? `https://${username}.github.io`
             : `https://${username}.github.io/${repo.name}`;
