@@ -13,7 +13,7 @@ header h1 {
 }
 
 header img {
-    height: 40px;
+    height: 100px;
 }
 
 .tagline {
@@ -75,5 +75,56 @@ header img {
     .project {
         background: #111827;
         border: 1px solid #1f2937;
+    }
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 16px;
+        max-width: 100%;
+    }
+
+    header h1 {
+        font-size: 22px;
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    header img {
+        height: 70px;
+    }
+
+    .tagline {
+        font-size: 14px;
+    }
+
+    .meta {
+        font-size: 12px;
+    }
+
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .links a {
+        font-size: 13px;
+    }
+
+    .project {
+        padding: 14px;
+        border-radius: 10px;
+    }
+
+    .project a {
+        display: inline-block;
+        margin-top: 5px;
+        word-break: break-word;
+    }
+
+    h2 {
+        font-size: 18px;
     }
 }
