@@ -23,10 +23,9 @@ async function getProjects() {
             : `https://${username}.github.io/${repo.name}`;
 
         div.innerHTML = `
-          <p>
-            <strong>${repo.name}</strong><br>
-            <a href="${url}" target="_blank">View Project</a>
-          </p>
+        <strong>${repo.name}</strong><br>
+        <small>${repo.description || "No description"}</small><br>
+        <a href="${url}" target="_blank">Open →</a>
         `;
 
         container.appendChild(div);

@@ -1,19 +1,22 @@
+/* Base */
 body {
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-    max-width: 700px;
+    max-width: 900px;
     margin: auto;
     padding: 24px;
     line-height: 1.6;
 }
 
+/* Header */
 header h1 {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-bottom: 5px;
 }
 
 header img {
-    height: 100px;
+    height: 60px;
 }
 
 .tagline {
@@ -21,6 +24,7 @@ header img {
     margin-top: -5px;
 }
 
+/* Links */
 .links {
     margin-top: 10px;
 }
@@ -31,21 +35,41 @@ header img {
     font-size: 14px;
 }
 
+/* Projects Layout */
 #projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
     margin-top: 20px;
 }
 
+/* Card */
 .project {
-    padding: 12px;
-    border-radius: 8px;
-    margin-bottom: 12px;
+    flex: 1 1 calc(50% - 16px);
+    /* 2 per row */
+    min-width: 260px;
+    padding: 14px;
+    border-radius: 10px;
     transition: all 0.2s ease;
 }
 
 .project:hover {
-    transform: translateY(-2px);
+    transform: translateY(-4px);
 }
 
+/* Text inside card */
+.project strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.project small {
+    opacity: 0.7;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* Light mode */
 @media (prefers-color-scheme: light) {
     body {
         background: #f8fafc;
@@ -62,6 +86,7 @@ header img {
     }
 }
 
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
     body {
         background: #0b0f17;
@@ -78,8 +103,19 @@ header img {
     }
 }
 
-@media (max-width: 600px) {
+/* Tablet (optional smooth scaling) */
+@media (max-width: 900px) {
+    body {
+        max-width: 700px;
+    }
 
+    .project {
+        flex: 1 1 calc(50% - 16px);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
     body {
         padding: 16px;
         max-width: 100%;
@@ -87,20 +123,15 @@ header img {
 
     header h1 {
         font-size: 22px;
-        flex-direction: row;
         gap: 8px;
     }
 
     header img {
-        height: 70px;
+        height: 50px;
     }
 
     .tagline {
         font-size: 14px;
-    }
-
-    .meta {
-        font-size: 12px;
     }
 
     .links {
@@ -113,18 +144,27 @@ header img {
         font-size: 13px;
     }
 
-    .project {
-        padding: 14px;
-        border-radius: 10px;
+    #projects {
+        flex-direction: column;
     }
 
-    .project a {
-        display: inline-block;
-        margin-top: 5px;
-        word-break: break-word;
+    .project {
+        flex: 1 1 100%;
     }
 
     h2 {
         font-size: 18px;
+    }
+}
+
+/* Large screens (🔥 upgrade) */
+@media (min-width: 1100px) {
+    body {
+        max-width: 1100px;
+    }
+
+    .project {
+        flex: 1 1 calc(33.33% - 16px);
+        /* 3 per row */
     }
 }
