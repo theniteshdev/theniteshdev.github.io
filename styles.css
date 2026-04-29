@@ -39,6 +39,33 @@ header img {
     border-radius: 8px;
 }
 
+.cert-container {
+    max-width: 900px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #fb923c;
+}
+
+.cert-container img {
+    width: 100%;
+}
+
+.cert-heading .cert-lead {
+    font-size: 14px;
+}
+
+.footer-above-seprater {
+    margin-top: 5em;
+    height: 5px;
+    width: 100%;
+    background-color: #e7e5e4;
+    border-radius: 1000px;
+}
+
+footer * {
+    text-align: center;
+}
+
 @media (prefers-color-scheme: light) {
     body {
         background: #fff7ed;
