@@ -66,6 +66,14 @@ footer * {
     text-align: center;
 }
 
+.experience-section {
+    background-color: #1f2933;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    color: #e7e5e4;
+}
+
 @media (prefers-color-scheme: light) {
     body {
         background: #fff7ed;
@@ -95,6 +103,10 @@ footer * {
     .project {
         background: #1c1917;
         border: 1px solid #292524;
+    }
+
+    .experience-section {
+        color: #e7e5e4;
     }
 }
 
